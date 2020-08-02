@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">VirtualRealDoctor</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_payment">MakePayment</string>
+    <string name="title_prescription">Prescription</string>
+    <string name="payment_button">Payment</string>
+    <string name="back_button">back</string>
+    <string name="prescription_button">Prescription</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

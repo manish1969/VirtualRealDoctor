@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.virtualrealdoctor.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/action_HomeFragment_to_PrescriptionFragment"
+            app:destination="@id/PrescriptionFragment" />
+        <action
+            android:id="@+id/action_HomeFragment_to_PaymentFragment"
+            app:destination="@id/PaymentFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_dashboard"
+        android:name="com.example.virtualrealdoctor.ui.dashboard.DashboardFragment"
+        android:label="@string/title_dashboard"
+        tools:layout="@layout/fragment_dashboard" />
+
+    <fragment
+        android:id="@+id/navigation_notifications"
+        android:name="com.example.virtualrealdoctor.ui.notifications.NotificationsFragment"
+        android:label="@string/title_notifications"
+        tools:layout="@layout/fragment_notifications" />
+
+    <fragment
+        android:id="@+id/PaymentFragment"
+        android:name="com.example.virtualrealdoctor.ui.PaymentFragment"
+        android:label="@string/title_payment"
+        tools:layout="@layout/fragment_payment">
+        <action
+            android:id="@+id/action_PaymentFragment_to_HomeFragment"
+            app:destination="@id/navigation_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/PrescriptionFragment"
+        android:name="com.example.virtualrealdoctor.PrescriptionFragment"
+        android:label="@string/title_prescription"
+        tools:layout="@layout/prescription_fragment">
+        <action
+            android:id="@+id/action_PrescriptionFragment_to_HomeFragment"
+            app:destination="@id/navigation_home" />
+    </fragment>
+</navigation>
